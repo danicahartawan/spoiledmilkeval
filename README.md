@@ -1,4 +1,4 @@
-# Exa Spoiled Milk Evaluation
+# Exa Spoiled Milk Evaluation  
 
 A comprehensive evaluation comparing Exa's neural search against baseline systems for deprecated technology queries.
 

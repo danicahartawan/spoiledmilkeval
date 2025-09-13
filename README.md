@@ -1,10 +1,34 @@
-# Exa Spoiled Milk Evaluation  
+# Exa & the Spoiled Milk Problem
+
+By Danica Hartawan
 
 A comprehensive evaluation comparing Exa's neural search against baseline systems for deprecated technology queries.
 
-## Overview
+## Why this exists
 
-The "Spoiled Milk" evaluation tests how well different search systems help developers find information about deprecated technologies and their alternatives. Like spoiled milk, deprecated technologies need to be replaced quickly with fresh alternatives.
+When I was evolving Metric into Toko (a feedback assistant that lives in-app), I kept hitting the same wall: deprecated APIs. Code that shipped last quarter silently broke, and searching for answers just made things worse.
+
+StackOverflow threads, random blogs, and even framework docs looked fine at first glance-like grabbing milk from the fridge that looks okay-until they quietly ruined my workflow. That's the spoiled milk problem. 
+
+This repo asks a simple but customer-convincing question: If Google and Bing keep serving spoiled milk, can Exa prove it's always surfacing the fresh, authoritative replacement first?
+
+## What I did
+
+I used the CUPS/product circles framework: clarify → users → needs → prioritization → solutions → metrics.
+
+1. Clarify: Developers waste hours on stale answers about deprecated APIs.
+
+2. Users:
+- Developers (migrating frameworks, debugging breaking changes)
+- AI agents/model builders (need authoritative replacements, not stale docs)
+- Enterprise teams (care about stability and reliability)
+
+Needs:
+- Early recognition of deprecations
+- Clear replacement guidance
+- Authority (official docs > GitHub issues > StackOverflow > blogs)
+
+## Scope & Setup
 
 **30 real-world deprecation queries** across three frameworks:
 - **Next.js** (10 queries): getInitialProps → getServerSideProps, Image layout prop, App Router migrations
@@ -12,28 +36,10 @@ The "Spoiled Milk" evaluation tests how well different search systems help devel
 - **TensorFlow** (10 queries): tf.contrib removals, Session → eager execution, optimizer renames
 
 **Systems Evaluated:**
-- **Exa**: Neural search with semantic understanding
-- **Google**: Traditional keyword search via Custom Search API
-- **StackOverflow**: Domain-specific search via StackOverflow API  
-- **Claude**: LLM-generated recommendations with citations
-
-## 🏆 Key Results
-
-**Winner: Claude** dominates with 93.3% deprecation detection and 50.0% complete solutions.
-**Exa** shows strong potential with 70.0% deprecation detection and maximum authority sources.
-
-| **System** | **Deprecation Detection** | **Replacement Guidance** | **Authority Level** | **Complete Solutions** |
-|------------|---------------------------|---------------------------|---------------------|------------------------|
-| **🥇 Claude** | **93.3%** | **53.3%** | **3.0** (Official) | **50.0%** |
-| **🥈 Exa** | **70.0%** | 36.7% | **3.0** (Official) | 3.3% |
-| **🥉 Google** | 13.3% | 10.0% | 0.5 (Low) | 10.0% |
-| **StackOverflow** | 0.0% | 0.0% | 1.0 (Forums) | 0.0% |
-
-**Key Insights:**
-- **Claude excels at complete solutions** - finds deprecation + replacement + authoritative sources 15x more often than competitors
-- **Exa delivers high-authority results** - consistently finds official documentation (3.0 authority tier)
-- **Google provides reliable fallback** - moderate success rate across all metrics
-- **StackOverflow struggled** with deprecation-specific query patterns
+- **Exa**: Neural search with semantic understanding (otw to being the best)
+- **Google**: Traditional keyword search via Custom Search API (an obvious choice)
+- **StackOverflow**: Domain-specific search via StackOverflow API (never tried but heard through reddit, pretty cool!)
+- **Claude**: LLM-generated recommendations with citations (spoiler alert, this one did the best)
 
 ## Quick Start
 
@@ -139,9 +145,44 @@ python -m src.eval_runner
 python -m pytest tests/ -v
 ```
 
+## What I Learned
+
+- Iteration is sososo messy: I burned time on over-broad queries, broken Claude calls, and mismatched authority scoring. Each mistake forced me to simplify and refocus.
+- AI as a co-pilot: About half my code came from ChatGPT (i've tested a lot of llms and this one worked the best for prompts), but I never copy-pasted. I treated it like an editor—drafts came from AI, judgment calls came from me.
+- Research mindset (asking the right questions aka what I believe is my strength): I stalked Exa's repos, docs, YouTube talks, podcasts, and even Reddit threads. That made sure this eval wasn't abstract-it was tied to real use cases developers care about.
+- Bias for action vs. hygiene: I pushed too fast and accidentally committed .env keys after a retreat. Fixed it by rotating keys, cleaning the repo, and adding guardrails. Early speed mattered, but cleanup taught me discipline (sadly).
+
+## Why This Matters
+
+If I can show Exa wins this benchmark—even on a small set of queries—it's directly convincing to customers. Developers don't want spoiled milk. They want to know:
+1. What broke 
+2. then, What to use instead
+3. From an authoritative source (like exa)
+
+That's the value I believe Exa can own!
+
+## Future Extensions (If I Had More Time)
+
+This repo is scoped to ~12-20h, but here's where I'd take it further:
+
+1. Expand Framework Coverage
+Add more ecosystems where deprecations move fast: React/Angular, Hugging Face, Kubernetes APIs.
+2. Automated Query Generation
+Right now I hand-curated 30 queries. With more time, I'd scrape GitHub issues, changelogs, and release notes to auto-generate fresh deprecation queries weekly; this would keep the benchmark living and continuously valuable.
+3. Agent Workflow Simulation
+Instead of static queries, we can build an agent harness that tries to fix code using different search APIs.
+4. Long-Tail Vertical Tests
+We can explore niche but high-value areas (medical AI libraries, enterprise APIs, financial compliance SDKs).
+
+OVERALL JUST EXCITED ABOUT WHAT'S NEXT FOR EXA'S EVALS
+
 ## Results & Interpretation
 
-After running evaluation, check `reports/summary.md` for detailed per-framework analysis, statistical breakdowns, and complete methodology. The Key Results section above summarizes the main findings.
+After running evaluation, check `reports/summary.md` for:
+- **Overall system ranking** by weighted effectiveness score
+- **Per-framework performance** (Next.js, PyTorch, TensorFlow breakdown)
+- **Detailed metrics** for each system
+- **Success rates** and statistical summaries
 
 ## Security Notes
 
@@ -176,7 +217,7 @@ python -m pytest tests/test_utils.py -v         # Utilities
 ```bibtex
 @misc{spoiled-milk-eval-2024,
   title={Spoiled Milk: Evaluating Search Systems for Deprecated Technology Queries},
-  year={2024},
+  year={2025},
   note={Exa evaluation framework}
 }
 ```

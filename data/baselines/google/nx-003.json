@@ -1,0 +1,21 @@
+{
+  "query_id": "nx-003",
+  "query": "Next.js pages router migrate to app router",
+  "curated_results": [
+    {
+      "title": "App Router Migration | Next.js",
+      "url": "https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration",
+      "snippet": "Complete guide to migrating from the pages directory to the app directory in Next.js 13+. Step-by-step migration process."
+    },
+    {
+      "title": "App Directory (Beta) | Next.js",
+      "url": "https://nextjs.org/docs/app/building-your-application/routing",
+      "snippet": "The app directory is a new paradigm for building applications in Next.js 13. It replaces the pages directory structure."
+    },
+    {
+      "title": "Next.js 13 App Directory - Vercel Blog",
+      "url": "https://vercel.com/blog/nextjs-app-directory",
+      "snippet": "Introducing the app directory: a new way to build applications with Next.js 13 featuring improved layouts and routing."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{"id": "nx-001", "query": "Next.js getInitialProps deprecated replacement getServerSideProps", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Move from getInitialProps to getServerSideProps or getStaticProps"}
+{"id": "nx-002", "query": "Next.js Image component layout fill deprecated", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Image layout prop removed in Next.js 13"}
+{"id": "nx-003", "query": "Next.js pages router migrate to app router", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Migration from pages/ to app/ directory structure"}
+{"id": "nx-004", "query": "Next.js next/head deprecated metadata API", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Replace next/head with Metadata API in app router"}
+{"id": "nx-005", "query": "Next.js _document.js Head import deprecated", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Document Head component changes in Next.js 13+"}
+{"id": "nx-006", "query": "Next.js API routes middleware deprecated", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "API routes middleware patterns updated"}
+{"id": "nx-007", "query": "Next.js @next/font deprecated next/font", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Font optimization package naming change"}
+{"id": "nx-008", "query": "Next.js runtime config publicRuntimeConfig deprecated", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Runtime configuration approach changed"}
+{"id": "nx-009", "query": "Next.js custom webpack config deprecated", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Webpack configuration patterns updated"}
+{"id": "nx-010", "query": "Next.js target experimental-serverless-trace deprecated", "framework": "nextjs", "intent": "deprecation-replacement", "notes": "Build target options changed"}
+{"id": "pt-001", "query": "PyTorch torch.autograd.Function staticmethod decorator required", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "forward and backward methods must use @staticmethod"}
+{"id": "pt-002", "query": "PyTorch volatile=True deprecated tensor creation", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Volatile tensors removed, use torch.no_grad() instead"}
+{"id": "pt-003", "query": "PyTorch CUDA stream context manager deprecated", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "CUDA stream usage patterns updated"}
+{"id": "pt-004", "query": "PyTorch torch.nn.functional import F deprecated", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Import patterns for functional module"}
+{"id": "pt-005", "query": "PyTorch DataLoader worker_init_fn deprecated signature", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Worker initialization function signature changes"}
+{"id": "pt-006", "query": "PyTorch torch.jit.script decorator deprecated", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "JIT scripting annotation changes"}
+{"id": "pt-007", "query": "PyTorch optimizer.zero_grad() set_to_none deprecated", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Gradient clearing best practices updated"}
+{"id": "pt-008", "query": "PyTorch torch.distributions Categorical deprecated", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Distribution class API changes"}
+{"id": "pt-009", "query": "PyTorch register_forward_hook deprecated signature", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Module hook registration pattern changes"}
+{"id": "pt-010", "query": "PyTorch transforms.ToTensor() deprecated import", "framework": "pytorch", "intent": "deprecation-replacement", "notes": "Transform import location changes"}
+{"id": "tf-001", "query": "TensorFlow tf.contrib.layers deprecated replacement", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "tf.contrib module completely removed in TF 2.0"}
+{"id": "tf-002", "query": "TensorFlow tf.Session deprecated eager execution", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Graph mode to eager execution migration"}
+{"id": "tf-003", "query": "TensorFlow tf.placeholder deprecated tf.Variable", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Placeholder pattern replaced with Variables"}
+{"id": "tf-004", "query": "TensorFlow tf.train.AdamOptimizer deprecated tf.optimizers", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Optimizer class renaming and location changes"}
+{"id": "tf-005", "query": "TensorFlow tf.layers deprecated tf.keras.layers", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Core layers moved to Keras"}
+{"id": "tf-006", "query": "TensorFlow tf.summary.scalar deprecated tf.summary.scalar", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Summary API v2 changes"}
+{"id": "tf-007", "query": "TensorFlow tf.estimator deprecated tf.keras", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Estimator API replaced with Keras"}
+{"id": "tf-008", "query": "TensorFlow tf.data.Dataset.make_one_shot_iterator deprecated", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Dataset iterator creation patterns"}
+{"id": "tf-009", "query": "TensorFlow tf.nn.softmax_cross_entropy_with_logits deprecated", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Loss function naming and signature changes"}
+{"id": "tf-010", "query": "TensorFlow tf.train.Saver deprecated tf.saved_model", "framework": "tensorflow", "intent": "deprecation-replacement", "notes": "Model saving mechanism updated"}

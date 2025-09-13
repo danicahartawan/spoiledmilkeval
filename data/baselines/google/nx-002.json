@@ -1,0 +1,21 @@
+{
+  "query_id": "nx-002",
+  "query": "Next.js Image component layout fill deprecated",
+  "curated_results": [
+    {
+      "title": "Next.js Image Component | Next.js",
+      "url": "https://nextjs.org/docs/pages/api-reference/components/image",
+      "snippet": "The layout prop has been removed in Next.js 13. Use the fill prop instead to maintain aspect ratio and fill the container."
+    },
+    {
+      "title": "Upgrading: Version 13 | Next.js",
+      "url": "https://nextjs.org/docs/pages/building-your-application/upgrading/version-13",
+      "snippet": "Breaking changes in Next.js 13 including Image component layout prop removal and migration to new fill prop."
+    },
+    {
+      "title": "next/image Changes - Next.js Blog",
+      "url": "https://nextjs.org/blog/next-13#new-next-image",
+      "snippet": "The Next.js Image component has been updated with improved performance and new props. The layout prop is deprecated."
+    }
+  ]
+}

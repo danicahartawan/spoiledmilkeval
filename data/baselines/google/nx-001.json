@@ -1,0 +1,21 @@
+{
+  "query_id": "nx-001",
+  "query": "Next.js getInitialProps deprecated replacement getServerSideProps",
+  "curated_results": [
+    {
+      "title": "Data Fetching: getServerSideProps | Next.js",
+      "url": "https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props",
+      "snippet": "getServerSideProps is a Next.js function that runs on the server-side at request time. It replaces getInitialProps for server-side rendering use cases."
+    },
+    {
+      "title": "Migrating from getInitialProps | Next.js",
+      "url": "https://nextjs.org/docs/pages/api-reference/functions/get-initial-props#migrating-from-getinitialprops",
+      "snippet": "getInitialProps is deprecated in favor of getServerSideProps and getStaticProps. Learn how to migrate your existing code."
+    },
+    {
+      "title": "Next.js Data Fetching Migration Guide",
+      "url": "https://nextjs.org/docs/pages/building-your-application/upgrading/app-router-migration",
+      "snippet": "Complete migration guide for upgrading data fetching methods including getInitialProps to modern alternatives."
+    }
+  ]
+}

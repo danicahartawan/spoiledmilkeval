@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Labels Schema",
+  "description": "Schema for ground truth labels to make metrics sharper",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier matching the query ID",
+      "pattern": "^[a-z]+-[0-9]{3}$"
+    },
+    "expected_replacements": {
+      "type": "array",
+      "description": "List of expected replacement terms/phrases that should appear in good results",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "banned_old_symbols": {
+      "type": "array", 
+      "description": "List of deprecated/old symbols that should NOT appear in good results",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional context and validation notes for this label set"
+    }
+  },
+  "required": ["id", "expected_replacements", "banned_old_symbols", "notes"],
+  "additionalProperties": false
+}

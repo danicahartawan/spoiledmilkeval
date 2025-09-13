@@ -1,0 +1,21 @@
+{
+  "query_id": "nx-004",
+  "query": "Next.js next/head deprecated metadata API",
+  "curated_results": [
+    {
+      "title": "Metadata API | Next.js",
+      "url": "https://nextjs.org/docs/app/building-your-application/optimizing/metadata",
+      "snippet": "The Metadata API replaces next/head in the app directory. Use metadata export or generateMetadata for SEO optimization."
+    },
+    {
+      "title": "Migrating from next/head | Next.js",
+      "url": "https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration#step-6-migrating-head-seo",
+      "snippet": "next/head is deprecated in the app router. Use the new Metadata API instead for managing page metadata and SEO."
+    },
+    {
+      "title": "App Router Migration Guide | Next.js", 
+      "url": "https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration",
+      "snippet": "Complete guide for migrating from pages to app router including head tag replacement with metadata API."
+    }
+  ]
+}

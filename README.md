@@ -17,6 +17,24 @@ The "Spoiled Milk" evaluation tests how well different search systems help devel
 - **StackOverflow**: Domain-specific search via StackOverflow API  
 - **Claude**: LLM-generated recommendations with citations
 
+## 🏆 Key Results
+
+**Winner: Claude** dominates with 93.3% deprecation detection and 50.0% complete solutions.
+**Exa** shows strong potential with 70.0% deprecation detection and maximum authority sources.
+
+| **System** | **Deprecation Detection** | **Replacement Guidance** | **Authority Level** | **Complete Solutions** |
+|------------|---------------------------|---------------------------|---------------------|------------------------|
+| **🥇 Claude** | **93.3%** | **53.3%** | **3.0** (Official) | **50.0%** |
+| **🥈 Exa** | **70.0%** | 36.7% | **3.0** (Official) | 3.3% |
+| **🥉 Google** | 13.3% | 10.0% | 0.5 (Low) | 10.0% |
+| **StackOverflow** | 0.0% | 0.0% | 1.0 (Forums) | 0.0% |
+
+**Key Insights:**
+- **Claude excels at complete solutions** - finds deprecation + replacement + authoritative sources 15x more often than competitors
+- **Exa delivers high-authority results** - consistently finds official documentation (3.0 authority tier)
+- **Google provides reliable fallback** - moderate success rate across all metrics
+- **StackOverflow struggled** with deprecation-specific query patterns
+
 ## Quick Start
 
 1. **Install dependencies:**
@@ -123,11 +141,7 @@ python -m pytest tests/ -v
 
 ## Results & Interpretation
 
-After running evaluation, check `reports/summary.md` for:
-- **Overall system ranking** by weighted effectiveness score
-- **Per-framework performance** (Next.js, PyTorch, TensorFlow breakdown)
-- **Detailed metrics** for each system
-- **Success rates** and statistical summaries
+After running evaluation, check `reports/summary.md` for detailed per-framework analysis, statistical breakdowns, and complete methodology. The Key Results section above summarizes the main findings.
 
 ## Security Notes
 

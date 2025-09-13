@@ -176,6 +176,34 @@ We can explore niche but high-value areas (medical AI libraries, enterprise APIs
 
 OVERALL JUST EXCITED ABOUT WHAT'S NEXT FOR EXA'S EVALS
 
+## What This Evaluation Reveals About Exa's API
+
+Based on running this eval, here's what I think Exa could improve to dominate the deprecation search space:
+
+### 🎯 **Major Opportunities**
+
+**1. Replacement Guidance Detection**
+- **Current:** 36.7% replacement coverage vs Claude's 53.3%
+- **Issue:** Exa finds deprecated content but struggles to surface "what to use instead"
+- **API Improvement:** Add semantic understanding for migration/replacement language patterns, boost results containing "instead of", "migrate to", "replaced by"
+
+**2. Complete Solution Assembly** 
+- **Current:** 3.3% complete solutions vs Claude's 50.0%
+- **Issue:** Rarely finds single results with deprecation + replacement + authority
+- **API Improvement:** Multi-result synthesis that combines authoritative deprecation notices with replacement guides, "solution chains" that link deprecated API docs to migration guides
+
+**3. Deprecation Recency Intelligence**
+- **Current:** Good authority (3.0) but missing some deprecation signals
+- **Issue:** May surface older official docs that don't mention recent deprecations
+- **API Improvement:** Temporal weighting for recently updated documentation, better understanding of version-specific deprecation language
+
+### 💡 **Exa's Competitive Advantages (Keep These!)**
+- **Authority scoring is excellent** (3.0 tier consistently)
+- **Semantic understanding beats keyword search** (70% vs Google's 13.3% deprecation detection)  
+- **Clean, structured results** vs Claude's hallucination risk
+
+**The core insight:** Exa excels at finding authoritative content but needs better synthesis to deliver complete developer solutions. Claude wins by generating comprehensive answers, but Exa could win by intelligently combining authoritative sources.
+
 ## Results & Interpretation
 
 After running evaluation, check `reports/summary.md` for:
